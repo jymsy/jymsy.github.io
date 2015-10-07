@@ -35,22 +35,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
-<meta name="description" content="Xcode默认没有删除当前行和复制当前行的快捷键，如果想要增加的话需要修改配置文件。
-1/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist
-这个文件里配置了一些可以设置快捷键的操作, 使用常用的编辑器打开它（需要root权限）。">
+<meta name="description" content="Xcode6之后默认无法创建Empty Application.下载模板https://github.com/jymsy/AddMissingTemplates
+将Empty Application.xctemplate文件夹存放到/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Lib">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xcode增加自定义快捷键">
-<meta property="og:url" content="http://yoursite.com/2015/10/04/xcode-shortcut/index.html">
+<meta property="og:title" content="Xcode添加空工程模板">
+<meta property="og:url" content="http://yoursite.com/2015/10/07/empty-xcode-project/index.html">
 <meta property="og:site_name" content="jym's Blog">
-<meta property="og:description" content="Xcode默认没有删除当前行和复制当前行的快捷键，如果想要增加的话需要修改配置文件。
-1/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist
-这个文件里配置了一些可以设置快捷键的操作, 使用常用的编辑器打开它（需要root权限）。">
-<meta property="og:updated_time" content="2015-10-04T09:35:53.000Z">
+<meta property="og:description" content="Xcode6之后默认无法创建Empty Application.下载模板https://github.com/jymsy/AddMissingTemplates
+将Empty Application.xctemplate文件夹存放到/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Lib">
+<meta property="og:updated_time" content="2015-10-07T09:07:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xcode增加自定义快捷键">
-<meta name="twitter:description" content="Xcode默认没有删除当前行和复制当前行的快捷键，如果想要增加的话需要修改配置文件。
-1/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist
-这个文件里配置了一些可以设置快捷键的操作, 使用常用的编辑器打开它（需要root权限）。">
+<meta name="twitter:title" content="Xcode添加空工程模板">
+<meta name="twitter:description" content="Xcode6之后默认无法创建Empty Application.下载模板https://github.com/jymsy/AddMissingTemplates
+将Empty Application.xctemplate文件夹存放到/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Lib">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +57,7 @@
   };
 </script>
 
-    <title> Xcode增加自定义快捷键 // jym's Blog </title>
+    <title> Xcode添加空工程模板 // jym's Blog </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -155,7 +152,7 @@
           
           
             
-              Xcode增加自定义快捷键
+              Xcode添加空工程模板
             
           
         </h1>
@@ -164,8 +161,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-04T17:11:29+08:00" content="2015-10-04">
-            2015-10-04
+          <time itemprop="dateCreated" datetime="2015-10-07T14:35:59+08:00" content="2015-10-07">
+            2015-10-07
           </time>
         </span>
 
@@ -183,11 +180,9 @@
       
 
       
-        <span itemprop="articleBody"><p>Xcode默认没有删除当前行和复制当前行的快捷键，如果想要增加的话需要修改配置文件。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist</span><br></pre></td></tr></table></figure>
-<p>这个文件里配置了一些可以设置快捷键的操作, 使用常用的编辑器打开它（需要root权限）。<br><a id="more"></a></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">key</span>&gt;</span>GDI Commands<span class="tag">&lt;/<span class="title">key</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="title">dict</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">key</span>&gt;</span>GDI Duplicate Current Line<span class="tag">&lt;/<span class="title">key</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">string</span>&gt;</span>selectLine:, copy:, moveToEndOfLine:, insertNewline:, paste:, deleteBackward:<span class="tag">&lt;/<span class="title">string</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">key</span>&gt;</span>GDI Delete Current Line<span class="tag">&lt;/<span class="title">key</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">string</span>&gt;</span>moveToEndOfLine:, deleteToBeginningOfLine:, deleteBackward:, moveDown:, moveToEndOfLine:<span class="tag">&lt;/<span class="title">string</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">key</span>&gt;</span>GDI Move Current Line Up<span class="tag">&lt;/<span class="title">key</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">string</span>&gt;</span>selectLine:, cut:, moveUp:, moveToBeginningOfLine:, insertNewLine:, paste:, moveBackward:<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">key</span>&gt;</span>GDI Move Current Line Down<span class="tag">&lt;/<span class="title">key</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">string</span>&gt;</span>selectLine:, cut:, moveDown:, moveToBeginningOfLine:, insertNewLine:, paste:, moveBackward:<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">key</span>&gt;</span>GDI Insert Line Above<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">string</span>&gt;</span>moveUp:, moveToEndOfLine:, insertNewline:<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">key</span>&gt;</span>GDI Insert Line Below<span class="tag">&lt;/<span class="title">key</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">string</span>&gt;</span>moveToEndOfLine:, insertNewline:<span class="tag">&lt;/<span class="title">string</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="title">dict</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>添加上面的配置之后，再到Xcode里面去绑定对应的快捷键。</p>
+        <span itemprop="articleBody"><p>Xcode6之后默认无法创建Empty Application.<br>下载模板<br><a href="https://github.com/jymsy/AddMissingTemplates" target="_blank" rel="external">https://github.com/jymsy/AddMissingTemplates</a></p>
+<p>将Empty Application.xctemplate文件夹存放到<br>/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project Templates/iOS/Application</p>
+<p>重启Xcode之后就可以使用了。</p>
 </span>
       
     </div>
@@ -205,13 +200,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/04/sublime-new-window/" rel="prev">sublime text打开文件时总是新建窗口</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/04/sublime-markdown/" rel="next">修改OSX中文件的默认打开方式</a>
+              <a href="/2015/10/04/sublime-new-window/" rel="next">sublime text打开文件时总是新建窗口</a>
             
           </div>
         </div>
