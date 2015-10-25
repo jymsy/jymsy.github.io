@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="xcode," />
+  <meta name="keywords" content="hhkb,linux," />
 
 
 
@@ -35,22 +35,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
-<meta name="description" content="Xcode默认没有删除当前行和复制当前行的快捷键，如果想要增加的话需要修改配置文件。
-1/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist
-这个文件里配置了一些可以设置快捷键的操作, 使用常用的编辑器打开它（需要root权限）。">
+<meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;前几天国庆节的时候入手了HHKB，到手的时候说实话并没有什么特别的感觉，键帽的触感不错。按起来跟之前的茶轴感觉不一样，一开始的阻力比较大，声音有点发闷，整体感觉很小，很轻。携带起来很方便。之前的酷冷xt虽然是87的，但是里面有钢板，很沉。这次就算是一步到位了，希望自己能退烧。&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;通过调节背后的开关，可以把左">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xcode增加自定义快捷键">
-<meta property="og:url" content="http://yoursite.com/2015/10/04/xcode-shortcut/index.html">
+<meta property="og:title" content="Linux下使用HHKB">
+<meta property="og:url" content="http://yoursite.com/2015/10/25/xbindkeys/index.html">
 <meta property="og:site_name" content="jym's Blog">
-<meta property="og:description" content="Xcode默认没有删除当前行和复制当前行的快捷键，如果想要增加的话需要修改配置文件。
-1/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist
-这个文件里配置了一些可以设置快捷键的操作, 使用常用的编辑器打开它（需要root权限）。">
-<meta property="og:updated_time" content="2015-10-04T09:35:53.000Z">
+<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;前几天国庆节的时候入手了HHKB，到手的时候说实话并没有什么特别的感觉，键帽的触感不错。按起来跟之前的茶轴感觉不一样，一开始的阻力比较大，声音有点发闷，整体感觉很小，很轻。携带起来很方便。之前的酷冷xt虽然是87的，但是里面有钢板，很沉。这次就算是一步到位了，希望自己能退烧。&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;通过调节背后的开关，可以把左">
+<meta property="og:updated_time" content="2015-10-25T12:49:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xcode增加自定义快捷键">
-<meta name="twitter:description" content="Xcode默认没有删除当前行和复制当前行的快捷键，如果想要增加的话需要修改配置文件。
-1/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist
-这个文件里配置了一些可以设置快捷键的操作, 使用常用的编辑器打开它（需要root权限）。">
+<meta name="twitter:title" content="Linux下使用HHKB">
+<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;前几天国庆节的时候入手了HHKB，到手的时候说实话并没有什么特别的感觉，键帽的触感不错。按起来跟之前的茶轴感觉不一样，一开始的阻力比较大，声音有点发闷，整体感觉很小，很轻。携带起来很方便。之前的酷冷xt虽然是87的，但是里面有钢板，很沉。这次就算是一步到位了，希望自己能退烧。&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;通过调节背后的开关，可以把左">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +54,7 @@
   };
 </script>
 
-    <title> Xcode增加自定义快捷键 // jym's Blog </title>
+    <title> Linux下使用HHKB // jym's Blog </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -155,7 +149,7 @@
           
           
             
-              Xcode增加自定义快捷键
+              Linux下使用HHKB
             
           
         </h1>
@@ -164,8 +158,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-04T17:11:29+08:00" content="2015-10-04">
-            2015-10-04
+          <time itemprop="dateCreated" datetime="2015-10-25T20:04:12+08:00" content="2015-10-25">
+            2015-10-25
           </time>
         </span>
 
@@ -183,11 +177,9 @@
       
 
       
-        <span itemprop="articleBody"><p>Xcode默认没有删除当前行和复制当前行的快捷键，如果想要增加的话需要修改配置文件。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist</span><br></pre></td></tr></table></figure>
-<p>这个文件里配置了一些可以设置快捷键的操作, 使用常用的编辑器打开它（需要root权限）。<br><a id="more"></a></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">key</span>&gt;</span>GDI Commands<span class="tag">&lt;/<span class="title">key</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="title">dict</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">key</span>&gt;</span>GDI Duplicate Current Line<span class="tag">&lt;/<span class="title">key</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">string</span>&gt;</span>selectLine:, copy:, moveToEndOfLine:, insertNewline:, paste:, deleteBackward:<span class="tag">&lt;/<span class="title">string</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">key</span>&gt;</span>GDI Delete Current Line<span class="tag">&lt;/<span class="title">key</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">string</span>&gt;</span>moveToEndOfLine:, deleteToBeginningOfLine:, deleteBackward:, moveDown:, moveToEndOfLine:<span class="tag">&lt;/<span class="title">string</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">key</span>&gt;</span>GDI Move Current Line Up<span class="tag">&lt;/<span class="title">key</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">string</span>&gt;</span>selectLine:, cut:, moveUp:, moveToBeginningOfLine:, insertNewLine:, paste:, moveBackward:<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">key</span>&gt;</span>GDI Move Current Line Down<span class="tag">&lt;/<span class="title">key</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">string</span>&gt;</span>selectLine:, cut:, moveDown:, moveToBeginningOfLine:, insertNewLine:, paste:, moveBackward:<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">key</span>&gt;</span>GDI Insert Line Above<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">string</span>&gt;</span>moveUp:, moveToEndOfLine:, insertNewline:<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">key</span>&gt;</span>GDI Insert Line Below<span class="tag">&lt;/<span class="title">key</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">string</span>&gt;</span>moveToEndOfLine:, insertNewline:<span class="tag">&lt;/<span class="title">string</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="title">dict</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>添加上面的配置之后，再到Xcode里面去绑定对应的快捷键。</p>
+        <span itemprop="articleBody"><p>&ensp;&ensp;&ensp;&ensp;前几天国庆节的时候入手了HHKB，到手的时候说实话并没有什么特别的感觉，键帽的触感不错。按起来跟之前的茶轴感觉不一样，一开始的阻力比较大，声音有点发闷，整体感觉很小，很轻。携带起来很方便。之前的酷冷xt虽然是87的，但是里面有钢板，很沉。这次就算是一步到位了，希望自己能退烧。<br>&ensp;&ensp;&ensp;&ensp;通过调节背后的开关，可以把左边的Meta键变成Fn，把右上角的Delete换成使用比较频繁的Backspace。用了一会感觉还是别扭，主要是方向键。于是在网上搜了一下，发现在OSX下的一个神器–Karabiner。通过它我把Control + jkli映射成了左下右上。不过公司的电脑用的是Arch，怎么办？找了一下发现通过xbindkeys+xvkbd能够实现类似的效果。<br>&ensp;&ensp;&ensp;&ensp;安装好xbindkeys和xvkbd之后，打开<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/.xbindkeysrc</span><br></pre></td></tr></table></figure></p>
+<p>添加如下配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"/usr/bin/xvkbd -xsendevent -text \\[Left]"</span></span><br><span class="line">  Control + j</span><br><span class="line"></span><br><span class="line"><span class="string">"/usr/bin/xvkbd -xsendevent -text \\[Right]"</span></span><br><span class="line">  Control + l</span><br><span class="line"></span><br><span class="line"><span class="string">"/usr/bin/xvkbd -xsendevent -text \\[Up]"</span></span><br><span class="line">  Control + i</span><br><span class="line"></span><br><span class="line"><span class="string">"/usr/bin/xvkbd -xsendevent -text \\[Down]"</span></span><br><span class="line">  Control + k</span><br></pre></td></tr></table></figure></p>
+<p>运行xbindkeys ，就给可以用Control + jkli来控制方向了。不过这还不是完美的方案，某些情况下用不了。</p>
 </span>
       
     </div>
@@ -196,7 +188,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/xcode/" rel="tag">#xcode</a>
+            <a href="/tags/hhkb/" rel="tag">#hhkb</a>
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
           
         </div>
       
@@ -205,13 +199,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/04/sublime-new-window/" rel="prev">sublime text打开文件时总是新建窗口</a>
+              <a href="/2015/10/25/xbindkeys/" rel="prev"></a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/04/sublime-markdown/" rel="next">修改OSX中文件的默认打开方式</a>
+              <a href="/2015/10/07/empty-xcode-project/" rel="next">Xcode添加空工程模板</a>
             
           </div>
         </div>
