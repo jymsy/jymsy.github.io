@@ -26,7 +26,7 @@
 
 
 
-  <meta name="keywords" content="mac," />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -35,23 +35,25 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
-<meta name="description" content="选择一个你要修改默认打开方式的文件
-点击Conmmand+i来查看文件信息
-点击打开方式并选择相应的程序然后按下全部更改（如果发现全部更新是灰的，说明你修改后的和之前的一样）并确认。">
+<meta name="description" content="1.任何一个应用都有且只有一个UIWindow对象，负责包含应用中所有的视图。加入窗口的视图都会成为该窗口的子视图（subview）。
+2.视图的frame和bounds属性这两个属性的类型都是CGRect，CGRect又包含了两个结构，分别是origin和size。
+其中frame用来确定与父视图的相对位置，而bounds则是用来设定视图本身的坐标位置。从而间接决定了它的子视图的位置。下面结合d">
 <meta property="og:type" content="article">
-<meta property="og:title" content="修改OSX中文件的默认打开方式">
-<meta property="og:url" content="http://yoursite.com/2015/10/04/sublime-markdown/index.html">
+<meta property="og:title" content="iOS学习笔记--视图和层次结构">
+<meta property="og:url" content="http://yoursite.com/2015/11/07/iOS 笔记（一）/index.html">
 <meta property="og:site_name" content="jym's Blog">
-<meta property="og:description" content="选择一个你要修改默认打开方式的文件
-点击Conmmand+i来查看文件信息
-点击打开方式并选择相应的程序然后按下全部更改（如果发现全部更新是灰的，说明你修改后的和之前的一样）并确认。">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/77b3fe9fjw1ewp5sd503cj20ah0k740g.jpg">
-<meta property="og:updated_time" content="2015-10-04T09:36:36.000Z">
+<meta property="og:description" content="1.任何一个应用都有且只有一个UIWindow对象，负责包含应用中所有的视图。加入窗口的视图都会成为该窗口的子视图（subview）。
+2.视图的frame和bounds属性这两个属性的类型都是CGRect，CGRect又包含了两个结构，分别是origin和size。
+其中frame用来确定与父视图的相对位置，而bounds则是用来设定视图本身的坐标位置。从而间接决定了它的子视图的位置。下面结合d">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/77b3fe9fgw1exssc4pvcbj208104rt8s.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/77b3fe9fjw1exstzuhbf0j20b60850tc.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/77b3fe9fjw1exsu8gjqzzj20b707mdg9.jpg">
+<meta property="og:updated_time" content="2015-11-07T15:43:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="修改OSX中文件的默认打开方式">
-<meta name="twitter:description" content="选择一个你要修改默认打开方式的文件
-点击Conmmand+i来查看文件信息
-点击打开方式并选择相应的程序然后按下全部更改（如果发现全部更新是灰的，说明你修改后的和之前的一样）并确认。">
+<meta name="twitter:title" content="iOS学习笔记--视图和层次结构">
+<meta name="twitter:description" content="1.任何一个应用都有且只有一个UIWindow对象，负责包含应用中所有的视图。加入窗口的视图都会成为该窗口的子视图（subview）。
+2.视图的frame和bounds属性这两个属性的类型都是CGRect，CGRect又包含了两个结构，分别是origin和size。
+其中frame用来确定与父视图的相对位置，而bounds则是用来设定视图本身的坐标位置。从而间接决定了它的子视图的位置。下面结合d">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -61,7 +63,7 @@
   };
 </script>
 
-    <title> 修改OSX中文件的默认打开方式 // jym's Blog </title>
+    <title> iOS学习笔记--视图和层次结构 // jym's Blog </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -156,7 +158,7 @@
           
           
             
-              修改OSX中文件的默认打开方式
+              iOS学习笔记--视图和层次结构
             
           
         </h1>
@@ -165,8 +167,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-04T15:39:11+08:00" content="2015-10-04">
-            2015-10-04
+          <time itemprop="dateCreated" datetime="2015-11-07T20:50:31+08:00" content="2015-11-07">
+            2015-11-07
           </time>
         </span>
 
@@ -184,13 +186,12 @@
       
 
       
-        <span itemprop="articleBody"><ol>
-<li>选择一个你要修改默认打开方式的文件</li>
-<li>点击Conmmand+i来查看文件信息</li>
-<li>点击打开方式并选择相应的程序然后按下全部更改（如果发现全部更新是灰的，说明你修改后的和之前的一样）并确认。</li>
-</ol>
-<a id="more"></a>
-<p><img src="http://ww4.sinaimg.cn/large/77b3fe9fjw1ewp5sd503cj20ah0k740g.jpg" alt="mk"></p>
+        <span itemprop="articleBody"><p>1.任何一个应用都有且只有一个UIWindow对象，负责包含应用中所有的视图。加入窗口的视图都会成为该窗口的子视图（subview）。</p>
+<p>2.视图的frame和bounds属性<br>这两个属性的类型都是CGRect，CGRect又包含了两个结构，分别是origin和size。<br><img src="http://ww4.sinaimg.cn/large/77b3fe9fgw1exssc4pvcbj208104rt8s.jpg" alt="mk"></p>
+<p>其中frame用来确定与父视图的相对位置，而bounds则是用来设定视图本身的坐标位置。从而间接决定了它的子视图的位置。<br>下面结合demo详细说明下这两个属性。<br><a id="more"></a><br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIView</span> *view1= [[<span class="built_in">UIView</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">200</span>, <span class="number">400</span>)];</span><br><span class="line">view1<span class="variable">.backgroundColor</span> = [<span class="built_in">UIColor</span> blackColor];</span><br><span class="line">[<span class="keyword">self</span><span class="variable">.view</span> addSubview:view1];</span><br><span class="line"></span><br><span class="line"><span class="built_in">UIView</span> *view2= [[<span class="built_in">UIView</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">20</span>, <span class="number">20</span>, <span class="number">150</span>, <span class="number">300</span>)];</span><br><span class="line">view2<span class="variable">.backgroundColor</span> = [<span class="built_in">UIColor</span> redColor];</span><br><span class="line">view2<span class="variable">.bounds</span> = <span class="built_in">CGRectMake</span>(<span class="number">10</span>, <span class="number">10</span>, <span class="number">150</span>, <span class="number">300</span>);</span><br><span class="line">[view1 addSubview:view2];</span><br><span class="line"></span><br><span class="line"><span class="built_in">UIView</span> *view3= [[<span class="built_in">UIView</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">30</span>, <span class="number">30</span>, <span class="number">4</span>, <span class="number">4</span>)];</span><br><span class="line">view3<span class="variable">.backgroundColor</span> = [<span class="built_in">UIColor</span> yellowColor];</span><br><span class="line">[view2 addSubview:view3];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"view2: %@"</span>, <span class="built_in">NSStringFromCGRect</span>(view2<span class="variable">.frame</span>));</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"view3: %@"</span>, <span class="built_in">NSStringFromCGRect</span>(view3<span class="variable">.frame</span>));</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww2.sinaimg.cn/large/77b3fe9fjw1exstzuhbf0j20b60850tc.jpg" alt="mk"></p>
+<p>接下来我们修改view3的frame.origin，<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="built_in">UIView</span> *view3= [[<span class="built_in">UIView</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">4</span>)];</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/77b3fe9fjw1exsu8gjqzzj20b707mdg9.jpg" alt="mk"></p>
 </span>
       
     </div>
@@ -199,7 +200,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/mac/" rel="tag">#mac</a>
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
           
         </div>
       
@@ -208,11 +209,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/04/xcode-shortcut/" rel="prev">Xcode增加自定义快捷键</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/25/xbindkeys/" rel="next">Linux下使用HHKB</a>
             
           </div>
         </div>
